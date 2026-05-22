@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do list</title>
+        <meta lang="en-US">
+        <meta charset="utf-8">
+        <meta name="author" content="Mike Shalom">
+        <meta name="description" content="To-do list made in reference and to put to practise what was learn from a JavaScript DOM manipulation tutorial. Dec. 28, 2024.">
+        <meta name="keywords" content="JavaScript DOM manipulation, To-do list">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--         <meta http-equiv="refresh" content="4"> -->
+        <link rel="stylesheet" href="base.css">
+    </head>
+    <body>
+        <div class="left-part">
+            <div class="input-bar">
+                <input type="text" name="input" id="input" value="" placeholder="Enter your task">
+                <button id="addTaskBtn" type="submit">+</button>
+            </div>
+            <div class="analytics">
+                <div id="fraction">
+                    <big>1</big>
+                    <small>/60</small>
+                </div>
+                &nbsp;
+                <div id="percentage">
+                    <big>50</big>
+                    <small>%</small>
+                </div>
+            </div>
+        </div>
+        <div class="tasks">
+            <ul>
+                <li>
+                    <div class="innerText">Grab Shopped Goods</div>
+                    <span class="doneBtn">P</span>
+                    <span class="deleteBtn">O</span>
+                </li><li>
+                    <div class="innerText">Grab Shopped Goods</div>
+                    <span class="doneBtn">P</span>
+                    <span class="deleteBtn">O</span>
+                </li>
+            </ul>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

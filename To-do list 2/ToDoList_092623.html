@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice: To-Do List</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+        body {
+            padding: 1rem;
+        }
+
+        #task_input {
+            border-bottom: 1px solid black;
+            width: 80vw;
+            height: 2rem;
+            padding: .3rem .5rem;
+            margin-bottom: 1rem;
+        }
+
+        #submit_btn {
+            margin-left: .5rem;
+        }
+
+        .task {
+            margin: 1rem;
+            padding: .3rem;
+            display: block;
+        }
+
+        .edit_button {
+            margin-left: .7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your To-do List</h1>
+    <input type="text" name="task_input" id="task_input" autocomplete="off" autofocus placeholder="Enter your task.">
+    <input type="submit" onclick="addToTasks()" id="submit_btn" value="Enter">
+    <div id="tasks">
+        <!-- <span class="task">
+            <input type="checkbox" name="task1" id="task1">
+            <span>Task</span>
+            <button onclick="editTask(e)" class="edit_button">Edit</button>
+            <button onclick="deleteTask(e)" class="del_button">Delete</button>
+        </span> -->
+    </div>
+
+    <script src="ToDoList.js" defer></script>
+</body>
+
+</html>
