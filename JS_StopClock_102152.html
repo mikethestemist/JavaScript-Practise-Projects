@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Stop Clock</title>
+</head>
+
+<body>
+    <h1 id="clock">00:00:00</h1>
+    <div>
+        <button id="start" onclick="startClock()">Start</button>
+        <button id="pause" onclick="stopClock()">Pause</button>
+        <button id="reset" onclick="resetClock()">Reset</button>
+    </div>
+
+    <script>
+        // stopclock logic
+
+        const clock = document.querySelector('#clock');
+        const startBtn = document.querySelector('#start');
+        const pauseBtn = document.querySelector('#pause');
+        const resetBtn = document.querySelector('#reset');
+
+        let secs = 0;
+        let mins = 0;
+        let hours = 0;
+
+        function updateClock() {
+            if (secs >= 60) { secs = 0; mins++; }
+            if (mins >= 60) { mins = 0; hours++; }
+
+            let time =
+                hours.toString().padStart(2, 0) + ':' +
+                mins.toString().padStart(2, 0) + ':' +
+                secs.toString().padStart(2, 0);
+
+            clock.innerHTML = time;
+            // console.log(hours, mins, secs);
+        }
+
+
+        let timeInterval;
+        function startClock() {
+            // console.log(hours, mins, secs);
+
+            timeInterval =
+                setInterval(function () {
+                    secs++; updateClock();
+                }, 1000);
+
+        }
+
+        function stopClock() {
+            clearInterval(timeInterval);
+        }
+
+        function resetClock() {
+            stopClock();
+            secs = 0;
+            mins = 0;
+            hours = 0;
+            updateClock();
+        }
+    </script>
+</body>
+
+</html>
